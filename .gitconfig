@@ -39,3 +39,5 @@
 	first = !sh -c \"git log master..\\$(git rev-parse --abbrev-ref HEAD) --oneline | tail -1\"
 	last = log -1 HEAD
 	fix = commit -a --amend -C HEAD
+[credential]
+	helper = osxkeychain
