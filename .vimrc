@@ -4,8 +4,8 @@ set ruler
 set textwidth=80
 set wildmenu
 set t_Co=256
-syntax enable
-
+ syntax enable
+  
 " Reload the current buffer if changed externally.
 au BufEnter * checktime
 set autoread
@@ -55,6 +55,9 @@ endif
 nnoremap 0 ^
 nnoremap ^ 0
 
-" Quickly insert a new line without exiting normal mode
-nnoremap <silent> <leader><c-o> :<C-u>call append(line("."),   repeat([""], v:count1))<CR>
-nnoremap <silent> <leader><c-O> :<C-u>call append(line(".")-1, repeat([""], v:count1))<CR>
+" Insert without exit normal mode
+:nnoremap s :exec "normal i".nr2char(getchar())."\e"<CR>
+:nnoremap S :exec "normal a".nr2char(getchar())."\e"<CR>
+
+" Disable automatic comment insertion
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
