@@ -4,11 +4,22 @@
 alias gfig="vim ~/.gitconfig"
 alias vrc="vim ~/.vimrc"
 alias zrc="vim ~/.zshrc"
+alias bp="vim ~/.bash_profile"
 alias szrc="source ~/.zshrc"
 alias omz="vim ~/.oh-my-zsh"
 alias sshfig="vim ~/.ssh/config"
 alias giig="vim .gitignore"
+alias sshfig="vim ~/.ssh/config"
 
 # CD
 alias docs="cd ~/Documents"
 alias dev="cd ~/Developer"
+alias download="cd ~/Downloads"
+
+# LS
+alias cls="clear; ls -lia"
+alias l="ls -lia"
+
+# Other
+alias uuid="uuidgen | tr -d - | tr -d '\n' | tr '[:upper:]' '[:lower:]'  | pbcopy && pbpaste && echo"
+alias pwcp="pwd | pbcopy"
