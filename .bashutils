@@ -1,0 +1,13 @@
+## Utility Funcs
+
+# create a node gitignore file
+function giignode() {
+  defaultgig=$(wget -qO- .gitignore https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore)
+  custom="# OS X\n.DS_Store\n\n# JetBrains\n.idea/\n"
+  echo "$defaultgig\n\n$custom" > .gitignore
+}
+
+# create directory and cd
+function mkcdir() {
+    mkdir -p "$1" && cd "$1"
+}
