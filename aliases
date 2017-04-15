@@ -7,6 +7,7 @@ alias zrc="vim ~/.zshrc"
 alias szrc="source ~/.zshrc"
 alias omz="vim ~/.oh-my-zsh"
 alias sshfig="vim ~/.ssh/config"
+alias giig="vim .gitignore"
 
 # CD
 alias docs="cd ~/Documents"
