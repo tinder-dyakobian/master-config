@@ -1,6 +1,7 @@
 " Enable default settings.
 filetype plugin indent on
 set ruler
+set number
 set textwidth=80
 set wildmenu
 set t_Co=256
