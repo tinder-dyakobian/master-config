@@ -1,43 +1,44 @@
 [core]
-    editor = 'sublime' --wait
+  editor = 'sublime' --wait
 [filter "media"]
-	required = true
-	clean = git media clean %f
-	smudge = git media smudge %f
+  required = true
+  clean = git media clean %f
+  smudge = git media smudge %f
 [user]
-	name = Daniel Yak
-	email = danielyaa5@gmail.com
+  name = Daniel Yak
+  email = danielyaa5@gmail.com
 [push]
-	default = simple
+  default = simple
 [filter "hawser"]
-	clean = git hawser clean %f
-	smudge = git hawser smudge %f
-	required = true
+  clean = git hawser clean %f
+  smudge = git hawser smudge %f
+  required = true
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
 [alias]
-	co = checkout
-    ec = config --global -e
-    up = !git pull --rebase --prune $@ && git submodule update --init --recursive
-    cob = checkout -b
-    cm = !git add -A && git commit -m
-    save = !git add -A && git commit -m 'SAVEPOINT'
-	br = !git branch
-    wip = !git add -u && git commit -m "WIP" 
-	undo = reset HEAD~1 --mixed
-    amend = commit -a --amend
-    wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
-    bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs -r git branch -d; }; f"
-    bdone = "!f() { git checkout ${1-master} && git up && git bclean ${1-master}; }; f"
-	ac = commit -a -m
-	st = !git status
-	sup = !sh -c \"git push --set-upstream origin \\$(git rev-parse --abbrev-ref HEAD)\"
-	com = !git checkout master
-	bls = !git branch --sort=committerdate 
-	first = !sh -c \"git log master..\\$(git rev-parse --abbrev-ref HEAD) --oneline | tail -1\"
-	last = log -1 HEAD
-	fix = commit -a --amend -C HEAD
+  co = checkout
+  ec = config --global -e
+  up = !git pull --rebase --prune $@ && git submodule update --init --recursive
+  cob = checkout -b
+  cm = !git add -A && git commit -m
+  save = !git add -A && git commit -m 'SAVEPOINT'
+  br = !git branch
+  wip = !git add -u && git commit -m "WIP" 
+  undo = reset HEAD~1 --mixed
+  amend = commit -a --amend
+  wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
+  bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs -r git branch -d; }; f"
+  bdone = "!f() { git checkout ${1-master} && git up && git bclean ${1-master}; }; f"
+  ac = commit -a -m
+  st = !git status
+  sup = !sh -c \"git push --set-upstream origin \\$(git rev-parse --abbrev-ref HEAD)\"
+  com = !git checkout master
+  bls = !git branch --sort=committerdate 
+  first = !sh -c \"git log master..\\$(git rev-parse --abbrev-ref HEAD) --oneline | tail -1\"
+  last = log -1 HEAD
+  fix = commit -a --amend -C HEAD
+  aac = "!f() { git add . && git ac $1; }; f"
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
