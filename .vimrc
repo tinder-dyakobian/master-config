@@ -56,5 +56,5 @@ nnoremap 0 ^
 nnoremap ^ 0
 
 " Quickly insert a new line without exiting normal mode
-nnoremap <silent> <leader>o :<C-u>call append(line("."),   repeat([""], v:count1))<CR>
-nnoremap <silent> <leader>O :<C-u>call append(line(".")-1, repeat([""], v:count1))<CR>
+nnoremap <silent> <leader><c-o> :<C-u>call append(line("."),   repeat([""], v:count1))<CR>
+nnoremap <silent> <leader><c-O> :<C-u>call append(line(".")-1, repeat([""], v:count1))<CR>
