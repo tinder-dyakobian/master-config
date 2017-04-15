@@ -1,0 +1,13 @@
+## Aliases
+
+# VIM
+alias gfig="vim ~/.gitconfig"
+alias vrc="vim ~/.vimrc"
+alias zrc="vim ~/.zshrc"
+alias szrc="source ~/.zshrc"
+alias omz="vim ~/.oh-my-zsh"
+alias sshfig="vim ~/.ssh/config"
+
+# CD
+alias docs="cd ~/Documents"
+alias dev="cd ~/Developer"
