@@ -15,6 +15,7 @@ alias sshfig="vim ~/.ssh/config"
 alias docs="cd ~/Documents"
 alias dev="cd ~/Developer"
 alias download="cd ~/Downloads"
+alias gopath="cd $GOPATH"
 
 # LS
 alias cls="clear; ls -lia"
