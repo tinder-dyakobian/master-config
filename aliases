@@ -22,4 +22,4 @@ alias l="ls -lia"
 
 # Other
 alias uuid="uuidgen | tr -d - | tr -d '\n' | tr '[:upper:]' '[:lower:]'  | pbcopy && pbpaste && echo"
-alias pwcp="pwd | pbcopy"
+alias pwdcp="pwd | pbcopy"
