@@ -55,3 +55,6 @@ killport ()
 {
   kill -9 $(lsof -i tcp:$1)
 }
+
+# copy the contents of the file to pbcopy
+function cpfile() { cat $1 | pbcopy }
